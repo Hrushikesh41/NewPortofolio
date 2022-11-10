@@ -1,0 +1,110 @@
+---
+import profile from "../assets/profile.jpeg";
+---
+
+<div class="header_Container">
+  <section class="left">
+    <div class="header_left">
+      <div class="header_content">
+        <h1> Hey <span class="wave">👋</span> Everyone </h1>
+      </div>
+      <div class="inner_header_container">Myself Hrushikesh Kokardekar</div>
+    </div>
+    <div class="inner_left">
+      <div class="inner_content">A Full Stack Web Developer</div>
+    </div>
+  </section>
+  <section class="right">
+    <div class="inner_right">
+      <div class="image">
+        <img src={profile} />
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .header_Container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header_Container .left {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .wave {
+    animation-name: wavy;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+
+  @keyframes wavy {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .header_Container .left .header_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .header_Container .inner_left .inner_content {
+    font-size: 1rem;
+    margin-right: 8rem;
+    display: flex;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  .right .inner_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .right .inner_right .image {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .image img{
+    width: 100%;
+    border-radius: 50%;
+  }
+</style>
